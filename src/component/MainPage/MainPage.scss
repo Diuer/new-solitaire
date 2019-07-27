@@ -1,0 +1,55 @@
+.main-page{
+    width: 100%;
+    height: calc(100vh - 60px);
+    min-height: 800px;
+    background-color: #FFF6F8;
+    padding: 0 15px;
+    box-sizing: border-box;
+    
+    .top-operation{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+        .temp-area-pocker{
+            display: flex;
+            .pocker{
+                background-color: #C6C3E1;
+            }
+        }
+        .sorted-area-pocker{
+            display: flex;
+            .pocker{
+                background-color: #948DCF;
+            }
+        }
+    }
+    .work-area-pocker{
+        display: flex;
+        height: calc(100% - 260px);
+        overflow-y: hidden;
+        flex-direction: row;
+        justify-content: space-between;
+        .work-column{
+            display: block;
+            width: 130px;
+            .pocker:nth-child(2){
+                top: -140px;
+            }
+            .pocker:nth-child(3){
+                top: -280px;
+            }
+            .pocker:nth-child(4){
+                top: -420px;
+            }
+            .pocker:nth-child(5){
+                top: -560px;
+            }
+            .pocker:nth-child(6){
+                top: -700px;
+            }
+            .pocker:nth-child(7){
+                top: -840px;
+            }
+        }
+    }
+}
