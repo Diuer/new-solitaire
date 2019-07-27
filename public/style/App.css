@@ -7,8 +7,9 @@
 .App {
   display: block;
   text-align: center;
-  max-width: 1100px;
   margin: auto;
+  background-color: #FFF6F8;
+  height: 100vh;
 }
 
 .App header {
@@ -25,7 +26,7 @@
   height: 60px;
   background-color: #3D3D3D;
   color: #fff;
-  padding: 0 20px;
+  padding: 0 calc((100% - 1140px) / 2);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

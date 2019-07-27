@@ -3,8 +3,8 @@
     height: calc(100vh - 60px);
     min-height: 800px;
     background-color: #FFF6F8;
-    padding: 0 15px;
     box-sizing: border-box;
+    padding: 0 calc((100% - 1130px) / 2);
     
     .top-operation{
         display: flex;
@@ -32,24 +32,24 @@
         .work-column{
             display: block;
             width: 130px;
-            .pocker:nth-child(2){
-                top: -140px;
-            }
-            .pocker:nth-child(3){
-                top: -280px;
-            }
-            .pocker:nth-child(4){
-                top: -420px;
-            }
-            .pocker:nth-child(5){
-                top: -560px;
-            }
-            .pocker:nth-child(6){
-                top: -700px;
-            }
-            .pocker:nth-child(7){
-                top: -840px;
-            }
+            // .pocker:nth-child(2){
+            //     top: -140px;
+            // }
+            // .pocker:nth-child(3){
+            //     top: -280px;
+            // }
+            // .pocker:nth-child(4){
+            //     top: -420px;
+            // }
+            // .pocker:nth-child(5){
+            //     top: -560px;
+            // }
+            // .pocker:nth-child(6){
+            //     top: -700px;
+            // }
+            // .pocker:nth-child(7){
+            //     top: -840px;
+            // }
         }
     }
 }

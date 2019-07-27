@@ -8,9 +8,12 @@
   background-color: #fff;
 }
 
-.pocker:last-child:hover {
-  border: 1px solid red;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.pocker:not(:empty) {
+  cursor: pointer;
+}
+
+.pocker img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=Pocker.css.map */

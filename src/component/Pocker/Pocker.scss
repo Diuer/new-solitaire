@@ -6,4 +6,11 @@
     border-radius: 10px;
     margin: 0 5px;
     background-color: #fff;
+    &:not(:empty){
+        cursor: pointer;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }

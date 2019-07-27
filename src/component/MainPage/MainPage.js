@@ -10,61 +10,44 @@ class MainPage extends React.Component{
 
 
     render(){
-        let {tempAreaArray, sortedAreaArray}=this.props
+        let {isNewGame, newCardsArray, tempAreaArray, sortedAreaArray, handlePockerClick}=this.props
 
         return (
+            newCardsArray!==undefined && (
             <div className='main-page'>
                 <div className='top-operation'>
                     <div className='temp-area-pocker'>
                     {
                         tempAreaArray.map((tempContent, tempIndex)=>{
-                            return <Pocker key={'tempArea'+tempIndex}/>
+                            return <Pocker pockerInfo={tempContent} key={'tempArea'+tempIndex} handlePockerClick={handlePockerClick}/>
                         })
                     }
                     </div>
                     <div className='sorted-area-pocker'>
                     {
                         sortedAreaArray.map((sortedContent, sortedIndex)=>{
-                            return <Pocker key={'tempArea'+sortedIndex}/>
+                            return <Pocker pockerInfo={sortedContent} key={'tempArea'+sortedIndex} handlePockerClick={handlePockerClick}/>
                         })
                     }
                     </div>
                 </div>
                 <div className='work-area-pocker'>
-                    <div className='work-column'>
-                        <Pocker/>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                        <Pocker/>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                        <Pocker/>
-                        <Pocker/>
-                        <Pocker/>
-                        <Pocker/>
-                        <Pocker/>
-                    </div>
-                    <div className='work-column'>
-                        <Pocker/>
-                    </div>
+                {
+                    newCardsArray.map((rowItem, rowIndex)=>{
+                        return (
+                        <div className='work-column' key={'rowColumn'+rowIndex}>
+                        {
+                            rowItem.map((item, itemIndex)=>{
+                                return <Pocker pockerInfo={item} key={'rowPocker'+itemIndex} rowIndex={rowIndex} itemIndex={itemIndex} handlePockerClick={handlePockerClick}/>
+                            })
+                        }
+                        </div>
+                        )
+                    })
+                }
                 </div>
             </div>
+            )
         )
     }
 }
