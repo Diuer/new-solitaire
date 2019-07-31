@@ -19,14 +19,14 @@ class MainPage extends React.Component{
                     <div className='temp-area-pocker'>
                     {
                         tempAreaArray.map((tempContent, tempIndex)=>{
-                            return <Pocker pockerInfo={tempContent} key={'tempArea'+tempIndex} handlePockerClick={handlePockerClick}/>
+                            return <Pocker infos={{'pockerInfo': tempContent, 'type': 'tempAreaArray'}} key={'tempArea'+tempIndex} handlePockerClick={handlePockerClick}/>
                         })
                     }
                     </div>
                     <div className='sorted-area-pocker'>
                     {
                         sortedAreaArray.map((sortedContent, sortedIndex)=>{
-                            return <Pocker pockerInfo={sortedContent} key={'tempArea'+sortedIndex} handlePockerClick={handlePockerClick}/>
+                            return <Pocker infos={{'pockerInfo': sortedContent, 'type': 'sortedAreaArray'}} key={'tempArea'+sortedIndex} handlePockerClick={handlePockerClick}/>
                         })
                     }
                     </div>
@@ -38,7 +38,7 @@ class MainPage extends React.Component{
                         <div className='work-column' key={'rowColumn'+rowIndex}>
                         {
                             rowItem.map((item, itemIndex)=>{
-                                return <Pocker pockerInfo={item} key={'rowPocker'+itemIndex} rowIndex={rowIndex} itemIndex={itemIndex} handlePockerClick={handlePockerClick}/>
+                                return <Pocker infos={{'pockerInfo': item, 'rowIndex': rowIndex, 'itemIndex': itemIndex, 'type': 'newCardsArray'}} key={'rowPocker'+itemIndex} handlePockerClick={handlePockerClick}/>
                             })
                         }
                         </div>
